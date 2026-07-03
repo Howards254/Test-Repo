@@ -1,0 +1,22 @@
+{
+  "taskId": "T005",
+  "title": "Roles & permissions middleware",
+  "assignedTo": "calebomondi",
+  "scope": [
+    "src/Middleware/AuthMiddleware.php",
+    "src/Middleware/RoleMiddleware.php",
+    "src/Core/Router.php"
+  ],
+  "dependencies": [
+    "T004"
+  ],
+  "acceptanceCriteria": [
+    "AuthMiddleware::handle() redirects unauthenticated users to /login and otherwise allows the request to proceed",
+    "RoleMiddleware::handle(['admin']) returns a 403 response (or a styled 403 view) when the authenticated user's role is not in the allowed list",
+    "Router supports attaching middleware to individual routes (e.g. $router->get('/users', [UserController::class,'index'])->middleware('auth','role:admin'))",
+    "All /users routes (index, create, store, edit, update, delete) are guarded by both auth and role:admin middleware",
+    "All /profile routes are guarded by auth middleware only",
+    "A non-admin user hitting /users receives a 403; a logged-out user hitting /users is redirected to /login"
+  ],
+  "status": "ready"
+}

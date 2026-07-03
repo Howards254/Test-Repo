@@ -1,0 +1,24 @@
+{
+  "taskId": "T007",
+  "title": "User profile & password change",
+  "assignedTo": "calebomondi",
+  "scope": [
+    "src/Controllers/ProfileController.php",
+    "src/Models/User.php",
+    "views/profile/show.php",
+    "views/profile/edit.php"
+  ],
+  "dependencies": [
+    "T004"
+  ],
+  "acceptanceCriteria": [
+    "ProfileController::show() renders the authenticated user's profile (name, email, role, member since) from views/profile/show.php",
+    "ProfileController::edit() renders an edit form for name and email, pre-filled, with CSRF token",
+    "ProfileController::update() validates name (required) and email (required, unique excluding current user), updates the record, flashes success, redirects to /profile",
+    "ProfileController::changePassword() verifies the current password with password_verify(), validates the new password (8-char min), hashes with bcrypt, updates, flashes success, redirects to /profile",
+    "Incorrect current password shows a validation error and does not change the password",
+    "Routes /profile (GET), /profile/edit (GET), /profile (PUT/PATCH), /profile/password (PUT/PATCH) are registered and guarded by auth middleware",
+    "A regular user cannot edit another user's profile (only their own)"
+  ],
+  "status": "ready"
+}

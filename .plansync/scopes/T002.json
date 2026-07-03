@@ -1,0 +1,22 @@
+{
+  "taskId": "T002",
+  "title": "Database schema & PDO layer",
+  "assignedTo": "Howards254",
+  "scope": [
+    "database/schema.sql",
+    "database/seed.php",
+    "src/Core/Database.php"
+  ],
+  "dependencies": [
+    "T001"
+  ],
+  "acceptanceCriteria": [
+    "database/schema.sql creates a `users` table with columns: id (PK, auto-increment), name (varchar), email (varchar, unique), password (varchar), role (enum('admin','user'), default 'user'), created_at (timestamp default now)",
+    "schema.sql uses InnoDB and utf8mb4 charset",
+    "src/Core/Database.php provides a PDO singleton via Database::connection(), throws a clear RuntimeException on connection failure",
+    "PDO is configured with ERRMODE_EXCEPTION, default fetch mode FETCH_ASSOC, and emulated prepares disabled",
+    "database/seed.php inserts a default admin user: admin@example.com / password123 (bcrypt hashed) with role 'admin', and is idempotent (re-running does not duplicate)",
+    "seed.php can be run via `php database/seed.php` and reports success/failure to stdout"
+  ],
+  "status": "ready"
+}

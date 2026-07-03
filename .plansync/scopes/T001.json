@@ -1,0 +1,24 @@
+{
+  "taskId": "T001",
+  "title": "Project scaffolding & config",
+  "assignedTo": "calebomondi",
+  "scope": [
+    "composer.json",
+    "public/index.php",
+    "public/.htaccess",
+    "config/config.php",
+    ".env.example",
+    "src/Core/Config.php"
+  ],
+  "dependencies": [],
+  "acceptanceCriteria": [
+    "Directory structure matches the plan: public/, src/{Core,Controllers,Middleware,Models}, views/{layouts,partials,auth,users,profile}, database/, config/",
+    "composer.json defines PSR-4 autoloading mapping src/ -> App\\ namespace",
+    "public/.htaccess rewrites all non-file requests to index.php",
+    "public/index.php requires composer autoload, loads config, starts a session, and dispatches the router",
+    "config/config.php loads .env values with sensible defaults (db host/name/user/pass, app name, base URL)",
+    ".env.example documents all required environment variables without secrets",
+    "Running `composer install` then `php -S localhost:8000 -t public` serves the app without fatal errors"
+  ],
+  "status": "ready"
+}

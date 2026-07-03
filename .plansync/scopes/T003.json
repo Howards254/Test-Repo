@@ -1,0 +1,27 @@
+{
+  "taskId": "T003",
+  "title": "Core infrastructure",
+  "assignedTo": "calebomondi",
+  "scope": [
+    "src/Core/Session.php",
+    "src/Core/Csrf.php",
+    "src/Core/Flash.php",
+    "src/Core/Request.php",
+    "src/Core/Router.php",
+    "src/Core/View.php"
+  ],
+  "dependencies": [
+    "T001",
+    "T002"
+  ],
+  "acceptanceCriteria": [
+    "Session.php provides static helpers: Session::start(), Session::get(), Session::set(), Session::forget(), and starts sessions safely (no double-start warnings)",
+    "Csrf.php generates a per-session token, exposes Csrf::token() and Csrf::verify($token), and regenerates the token after login/logout",
+    "Flash.php supports Flash::set('key','message') and Flash::get('key') that reads once and clears; data survives a redirect",
+    "Request.php exposes Request::method(), Request::input($key,$default), Request::all(), Request::has($key), and Request::path()",
+    "Router.php supports registering GET/POST routes with controller@method or closure handlers, route parameters (e.g. /users/{id}), and a dispatch() method returning a 404 when no route matches",
+    "View.php renders a template from views/ with extracted data, supports a layout, and escapes output by default via a helper e($value) returning htmlspecialchars",
+    "All core classes are namespaced under App\\Core and autoload correctly"
+  ],
+  "status": "ready"
+}

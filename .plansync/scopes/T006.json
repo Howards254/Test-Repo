@@ -1,0 +1,26 @@
+{
+  "taskId": "T006",
+  "title": "User CRUD (admin) with search & pagination",
+  "assignedTo": "Howards254",
+  "scope": [
+    "src/Controllers/UserController.php",
+    "src/Models/User.php",
+    "views/users/index.php",
+    "views/users/create.php",
+    "views/users/edit.php"
+  ],
+  "dependencies": [
+    "T005"
+  ],
+  "acceptanceCriteria": [
+    "UserController::index() lists users with a search box (filter by name or email via LIKE) and pagination (e.g. 10 per page) using a ?page= and ?q= query string; paginated via SQL LIMIT/OFFSET with prepared statements",
+    "index view shows a table (name, email, role, created_at) with edit/delete links, the search input preserving ?q=, and pagination links preserving ?q= and ?page=",
+    "UserController::create() renders a form (name, email, password, role) with CSRF token and validation error display",
+    "UserController::store() validates required fields + unique email + 8-char min password, hashes the password with bcrypt, inserts the user, flashes success, and redirects to /users",
+    "UserController::edit($id) renders the edit form pre-filled with the user's data (password field left blank; empty on submit means 'no change')",
+    "UserController::update($id) validates input, updates fields, optionally re-hashes a new password if provided, flashes success, redirects to /users",
+    "UserController::delete($id) deletes the user (prevents deleting the currently logged-in admin), flashes success, redirects to /users",
+    "All list/search/pagination queries use prepared statements; all output is escaped"
+  ],
+  "status": "ready"
+}

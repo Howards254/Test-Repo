@@ -1,0 +1,25 @@
+{
+  "taskId": "T009",
+  "title": "Security hardening pass",
+  "assignedTo": "calebomondi",
+  "scope": [
+    "src/Core/Csrf.php",
+    "src/Core/View.php",
+    "src/Controllers/AuthController.php",
+    "src/Controllers/UserController.php",
+    "src/Controllers/ProfileController.php",
+    "src/Models/User.php"
+  ],
+  "dependencies": [
+    "T008"
+  ],
+  "acceptanceCriteria": [
+    "Every POST/PUT/DELETE form includes a hidden csrf_token field and the corresponding controller action verifies it before mutating state; a bad token aborts with 419",
+    "All user-controlled output is passed through e()/htmlspecialchars (no raw echo of variables in any view) — verified by grep for `<?= $` patterns and confirming escaping",
+    "Every database query uses a prepared statement with bound parameters (no string concatenation of user input into SQL) — verified by grep for raw query construction",
+    "Password policy: minimum 8 characters, enforced on register/create/edit/change-password; rejected attempts show a clear validation error",
+    "Sessions use a reasonable cookie configuration (HttpOnly, SameSite=Lax) set before session start",
+    "A short manual or scripted security checklist in the README documents these controls"
+  ],
+  "status": "ready"
+}

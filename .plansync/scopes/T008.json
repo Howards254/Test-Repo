@@ -1,0 +1,25 @@
+{
+  "taskId": "T008",
+  "title": "Base layout & Bootstrap UI",
+  "assignedTo": "Howards254",
+  "scope": [
+    "views/layouts/app.php",
+    "views/partials/navbar.php",
+    "views/partials/flash.php",
+    "views/errors/403.php",
+    "views/errors/404.php"
+  ],
+  "dependencies": [
+    "T006",
+    "T007"
+  ],
+  "acceptanceCriteria": [
+    "views/layouts/app.php includes Bootstrap 5 via CDN (CSS + JS bundle), renders the navbar partial, the flash partial, then the page content, and is used by all feature views",
+    "navbar shows 'Login' for guests; for authenticated users shows the user's name, a link to Profile, and Logout; for admins also shows a 'Users' link",
+    "navbar highlights the active route and is responsive (collapses on small screens via Bootstrap navbar-toggler)",
+    "flash partial renders success/error/notice messages from Flash and auto-dismisses with Bootstrap alerts",
+    "views/errors/403.php and views/errors/404.php render styled error pages using the base layout",
+    "All feature views (login, users index/create/edit, profile show/edit) use the base layout and look consistent and responsive"
+  ],
+  "status": "ready"
+}
