@@ -1,7 +1,7 @@
 {
   "taskId": "T003",
   "title": "Core infrastructure",
-  "assignedTo": "calebomondi",
+  "assignedTo": "Howards254",
   "scope": [
     "src/Core/Session.php",
     "src/Core/Csrf.php",

@@ -1,7 +1,7 @@
 {
   "taskId": "T001",
   "title": "Project scaffolding & config",
-  "assignedTo": "calebomondi",
+  "assignedTo": "Howards254",
   "scope": [
     "composer.json",
     "public/index.php",

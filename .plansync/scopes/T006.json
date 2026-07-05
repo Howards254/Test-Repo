@@ -1,7 +1,7 @@
 {
   "taskId": "T006",
   "title": "User CRUD (admin) with search & pagination",
-  "assignedTo": "Howards254",
+  "assignedTo": "calebomondi",
   "scope": [
     "src/Controllers/UserController.php",
     "src/Models/User.php",

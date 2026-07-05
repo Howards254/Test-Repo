@@ -1,7 +1,7 @@
 {
   "taskId": "T004",
   "title": "Authentication",
-  "assignedTo": "Howards254",
+  "assignedTo": "calebomondi",
   "scope": [
     "src/Controllers/AuthController.php",
     "src/Core/Auth.php",

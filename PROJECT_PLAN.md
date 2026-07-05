@@ -6,15 +6,15 @@ A lightweight user management system built with plain PHP 8.2+, MySQL (PDO), and
 
 | Task | Title | Assignee | Status | Issue |
 |------|-------|----------|--------|-------|
-| T001 | Project scaffolding & config | calebomondi | ready | #1 |
+| T001 | Project scaffolding & config | Howards254 | ready | #1 |
 | T002 | Database schema & PDO layer | Howards254 | ready | #2 |
-| T003 | Core infrastructure | calebomondi | ready | #3 |
-| T004 | Authentication | Howards254 | ready | #4 |
+| T003 | Core infrastructure | Howards254 | ready | #3 |
+| T004 | Authentication | calebomondi | ready | #4 |
 | T005 | Roles & permissions middleware | calebomondi | ready | #5 |
-| T006 | User CRUD (admin) with search & pagination | Howards254 | ready | #6 |
+| T006 | User CRUD (admin) with search & pagination | calebomondi | ready | #6 |
 | T007 | User profile & password change | calebomondi | ready | #7 |
-| T008 | Base layout & Bootstrap UI | Howards254 | ready | #8 |
-| T009 | Security hardening pass | calebomondi | ready | #9 |
+| T008 | Base layout & Bootstrap UI | calebomondi | ready | #8 |
+| T009 | Security hardening pass | Howards254 | ready | #9 |
 | T010 | README & setup docs | Howards254 | ready | #10 |
 
 ## Task Details

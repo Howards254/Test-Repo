@@ -1,7 +1,7 @@
 {
   "taskId": "T009",
   "title": "Security hardening pass",
-  "assignedTo": "calebomondi",
+  "assignedTo": "Howards254",
   "scope": [
     "src/Core/Csrf.php",
     "src/Core/View.php",

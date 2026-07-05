@@ -1,0 +1,28 @@
+<!-- plansync -->
+You are assigned to task T010: README & setup docs.
+
+Project: Simple PHP User Management System
+Description: A lightweight user management system built with plain PHP 8.2+, MySQL (PDO), and Bootstrap 5. Provides authentication, role-based access control (admin/user), full CRUD for users with search and pagination, and a self-service user profile with password change. Uses PSR-4 autoloading via Composer, server-rendered views, and standard security practices (CSRF tokens, prepared statements, output escaping, bcrypt password hashing).
+
+## Your Scope
+You may edit files matching these glob patterns:
+  - README.md
+
+You may read the entire project for context, but you must NOT write to files outside your scope. Doing so will corrupt the project's delegation model.
+
+## What You Need to Build
+Write the README documenting how to install, configure the database, seed the admin user, run the local dev server, and the default credentials plus security notes.
+
+## Acceptance Criteria
+  - README.md documents prerequisites: PHP 8.2+, Composer, MySQL
+  - Includes step-by-step setup: clone, composer install, copy .env.example to .env and fill DB credentials, import database/schema.sql, run php database/seed.php
+  - Documents running the app via `php -S localhost:8000 -t public`
+  - States default admin credentials (admin@example.com / password123) with an explicit instruction to change them immediately after first login
+  - Includes a security notes section summarizing CSRF, prepared statements, bcrypt hashing, and output escaping
+  - Lists available routes (login, logout, users CRUD, profile) and the role each requires
+
+## Dependencies
+Other tasks you depend on (you can read their files but not edit them):
+  - T008: Base layout & Bootstrap UI
+  - T009: Security hardening pass
+<!-- end-plansync -->
