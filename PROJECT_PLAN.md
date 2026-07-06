@@ -6,16 +6,16 @@ A lightweight user management system built with plain PHP 8.2+, MySQL (PDO), and
 
 | Task | Title | Assignee | Status | Issue |
 |------|-------|----------|--------|-------|
-| T001 | Project scaffolding & config | Howards254 | ready | #1 |
-| T002 | Database schema & PDO layer | Howards254 | ready | #2 |
-| T003 | Core infrastructure | Howards254 | ready | #3 |
-| T004 | Authentication | calebomondi | ready | #4 |
-| T005 | Roles & permissions middleware | calebomondi | ready | #5 |
-| T006 | User CRUD (admin) with search & pagination | calebomondi | ready | #6 |
-| T007 | User profile & password change | calebomondi | ready | #7 |
-| T008 | Base layout & Bootstrap UI | calebomondi | ready | #8 |
-| T009 | Security hardening pass | Howards254 | ready | #9 |
-| T010 | README & setup docs | Howards254 | ready | #10 |
+| T001 | Project scaffolding & config | Howards254 | ready | #21 |
+| T002 | Database schema & PDO layer | Howards254 | ready | #22 |
+| T003 | Core infrastructure | Howards254 | ready | #23 |
+| T004 | Authentication | calebomondi | ready | #24 |
+| T005 | Roles & permissions middleware | calebomondi | ready | #25 |
+| T006 | User CRUD (admin) with search & pagination | calebomondi | ready | #26 |
+| T007 | User profile & password change | calebomondi | ready | #27 |
+| T008 | Base layout & Bootstrap UI | calebomondi | ready | #28 |
+| T009 | Security hardening pass | Howards254 | ready | #29 |
+| T010 | README & setup docs | Howards254 | ready | #30 |
 
 ## Task Details
 
