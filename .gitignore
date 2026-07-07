@@ -1,2 +1,3 @@
-
 .plansync/config.json
+/vendor/
+.env

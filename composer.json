@@ -1,0 +1,16 @@
+{
+    "name": "howards254/php-user-management",
+    "description": "Simple PHP User Management System",
+    "type": "project",
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "serve": "php -S localhost:8000 -t public"
+    }
+}
